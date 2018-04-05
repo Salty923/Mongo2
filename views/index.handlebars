@@ -11,10 +11,16 @@
         </div>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div>
+                <div class="text-center">
                     {{#each meetup}}
-                    <div class="meetBox">
+                    <div class="text-center meetBox">
                         <a class="listing" href="{{this.link}}">{{this.title}}</a>
+                        <br>
+                        <input class="pull-left" type="text" name="comment" placeholder="comment...">
+                        
+                        <button id="{{this.id}}" type="button" class="btn btn-sm btn-success">submit</button>
+                        
+
                     </div>
                     {{/each}}
                 </div>
