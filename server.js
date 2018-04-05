@@ -17,7 +17,7 @@ app.set("view engine", "handlebars");
 
 app.use(routes);
 
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/productZone"
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/meetup"
 mongoose.connect(MONGODB_URI);
 
 app.listen(PORT, function () {
