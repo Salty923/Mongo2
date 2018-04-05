@@ -20,6 +20,14 @@ app.use(routes);
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/meetup"
 mongoose.connect(MONGODB_URI);
 
+// Set mongoose to leverage built in JavaScript ES6 Promises
+// Connect to the Mongo DB
+mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI, {
+    // useMongoClient: true
+});
+
+
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
 });

@@ -6,4 +6,9 @@ module.exports = {
             res.json(dbmeetup);
         });
     },
+    create: function (req, res) {
+        db.meetup.create().then(function (dbmeetup) {
+            res.json(dbmeetup);
+        });
+    }
 }
